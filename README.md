@@ -1,5 +1,18 @@
 # abstract-class-methods :octocat:
 ## Clases Abractas
-:rocket: La clase Abtracta declara la existencia de moetodos pero no los implenta.
-:pushpin: Para declar una clase como abtracta, se utiliza la lapabra reservada "abstract".
-:paperclip: Una clase abtracta no puede instaciar pero si heredar a las clases hijas la funcionalidad.
+
+```mermaid
+graph TB
+
+  SubGraph1 --> SubGraph1Flow
+  subgraph "SubGraph 1 Flow"
+  SubGraph1Flow(Animales)
+  SubGraph1Flow -- extends --> AnimalCarnívoro
+  SubGraph1Flow -- extends --> AnimalHerbívoro
+  end
+
+  subgraph "Main Graph"
+  SubGraph1[seresVivos]
+  SubGraph1 --> FinalThing(Plantas)
+end
+```
